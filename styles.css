@@ -11,7 +11,7 @@ body {
   width: 1200px;
   border: 1px solid rgb(248, 142, 142);
   margin: 5rem auto;
-  background: url("/images/background.jpg");
+  background: url("./images/background.jpg");
   background-size: cover;
   position: relative;
   overflow-x: hidden;
