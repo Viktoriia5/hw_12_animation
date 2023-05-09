@@ -1,0 +1,139 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+  overflow-y: hidden;
+  box-sizing: border-box;
+}
+
+.background {
+  height: 600px;
+  width: 1200px;
+  border: 1px solid rgb(248, 142, 142);
+  margin: 5rem auto;
+  background: url("/images/background.jpg");
+  background-size: cover;
+  position: relative;
+  overflow-x: hidden;
+}
+.car {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0px;
+  width: 400px;
+  height: 350px;
+  z-index: 0;
+  animation: move 9s linear forwards infinite;
+}
+.car__frame {
+  position: absolute;
+  bottom: 150px;
+  right: 100px;
+  width: 250px;
+  height: 90px;
+  background-color: rgb(16, 69, 184);
+  border-radius: 40px 40px 2px 2px;
+  animation: bounce 3s ease forwards infinite;
+}
+.car__upper-body {
+  position: absolute;
+  bottom: 80px;
+  right: 50px;
+  width: 150px;
+  height: 60px;
+  background-color: rgb(16, 69, 184);
+  border-radius: 30px 30px 0 0;
+}
+.wheel {
+  position: absolute;
+  bottom: -100px;
+  width: 60px;
+  height: 60px;
+  background-color: #424242;
+  border-radius: 50%;
+}
+.left-wheel {
+  right: 100px;
+}
+.right-wheel {
+  right: 0px;
+}
+.inner-wheel {
+  position: absolute;
+  bottom: -90px;
+  width: 40px;
+  height: 40px;
+  background-color: #fafafa;
+  border-radius: 50%;
+  box-shadow: inset 4px 4px 10px rgba(0, 0, 0, 0.5);
+  animation: rotate 3s lenear forwards infinite;
+}
+.left-inner-wheel {
+  right: 110px;
+}
+.right-inner-wheel {
+  right: 10px;
+}
+.window {
+  position: absolute;
+  bottom: 10px;
+  width: 60px;
+  height: 40px;
+  background-color: #fafafa;
+}
+.left-window {
+  right: 80px;
+  border-radius: 20px 2px 2px 2px;
+}
+.right-window {
+  right: 10px;
+  border-radius: 2px 20px 2px 2px;
+}
+.light {
+  position: absolute;
+  bottom: -20px;
+  right: -80px;
+  width: 60px;
+  height: 30px;
+  background: linear-gradient(-90deg, #ffeb3b, #fff59d);
+  border-radius: 0% 100% 100% 0% / 0% 50% 49% 0%;
+  z-index: -1;
+  transform: rotate(180deg);
+}
+.car-shadow {
+  position: absolute;
+  bottom: -100px;
+  right: -50px;
+  width: 230px;
+  height: 20px;
+  background-color: #bdbdbd;
+  border-radius: 50%;
+  z-index: -2;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes move {
+  100% {
+    left: 700px;
+  }
+}
+
+@keyframes bounce {
+  25% {
+    bottom: 155px;
+  }
+  50% {
+    bottom: 150px;
+  }
+  75% {
+    bottom: 155px;
+  }
+}
